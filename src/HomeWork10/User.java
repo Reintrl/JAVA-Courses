@@ -48,11 +48,8 @@ public class User implements Cloneable {
     }
 
     // Метод для глубокого копирования
-    public User deepClone() {
-        Address clonedAddress = new Address(
-                this.address.getStreet(),
-                this.address.getCity(),
-                this.address.getZipCode());
+    public User deepClone() throws CloneNotSupportedException {
+        Address clonedAddress = (Address)this.address.clone();
         return new User(
                 this.id,
                 this.username,

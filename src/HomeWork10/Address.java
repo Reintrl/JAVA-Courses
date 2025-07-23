@@ -2,7 +2,7 @@ package HomeWork10;
 
 import java.util.Objects;
 
-public class Address {
+public class Address implements Cloneable {
     private String street;
     private String city;
     private String zipCode;
@@ -30,6 +30,11 @@ public class Address {
         return Objects.equals(street, address.street) &&
                 Objects.equals(city, address.city) &&
                 Objects.equals(zipCode, address.zipCode);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     // Геттеры
