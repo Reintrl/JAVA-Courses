@@ -18,7 +18,6 @@ class SelectionSort extends SortAlgorithm {
                 }
             }
 
-            // Обмен элементов
             int temp = array[minIndex];
             array[minIndex] = array[i];
             array[i] = temp;
